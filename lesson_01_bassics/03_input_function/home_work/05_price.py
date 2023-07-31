@@ -6,5 +6,5 @@ pencil_price = 3
 pen_price = pencil_price + 2
 marker_price = pen_price + 7
 
-total = (pencils*pencil_price) + (pens*pen_price) + (markers*marker_price)
+total = (pencils * pencil_price) + (pens * pen_price) + (markers * marker_price)
 print(f"the total cost is: {total}$")

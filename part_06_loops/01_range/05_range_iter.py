@@ -1,0 +1,20 @@
+print(range(5))
+print(type(range(5)))
+
+range_iter = iter(range(5))
+print(range_iter)
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter))
+
+range_iter = iter("idan yekutiel")
+print(range_iter)
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter))
+print(next(range_iter)) # out of range
+print(next(range_iter))

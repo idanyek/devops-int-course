@@ -13,4 +13,4 @@ days = {
     12: 31
 }
 
-print(days[1])
+print(days[6])

@@ -1,6 +1,5 @@
 import flet as ft
 def main(page: ft.Page):
-    def button_click(e: ft.ControlEvent):
         print("Button clicked")
         page.add(ft.Text(value=f"Your Name is {text_field.value}"))
         print(e.control.text)

@@ -8,11 +8,6 @@ dp = Dispatcher()
 
 
 @dp.message()
-async def replay_as_echo(message: types.Message):
-    await message.reply(text=message.text)
-
-
-@dp.message()
 async def answer_as_echo(message: types.Message):
     await message.answer(text=message.text)
 

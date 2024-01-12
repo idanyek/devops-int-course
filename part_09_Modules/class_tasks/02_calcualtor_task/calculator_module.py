@@ -32,10 +32,12 @@ def calculate(x: float, y: float, operator: str):
 def run_calculator():
     try:
         num1, operator, num2 = input("enter the math request with spaces as separate (sample: 12 + 25): ").split()
-        return f"{num1} {operator} {num2} = {calculate(float(num1), float(num2), operator)}"
+        try:
+            return f"{num1} {operator} {num2} = {calculate(float(num1), float(num2), operator)}"
+        except ZeroDivisionError:
+            return f"{num1} {operator} {num2} = Cannot divide by 0. please try again..."
     except ValueError as error:
         return f"\tERROR: {error}.\n\t\tplease try again...\n"
-    except ZeroDivisionError:
-        return f"{num1} {operator} {num2} = Cannot divide by 0. please try again..."
+
 
 

@@ -1,2 +1,4 @@
 .idea/
 */__pycache__/
+/part_15_flask/myproject/.venv/
+.env

@@ -26,7 +26,7 @@ def main(page: ft.Page):
         # create a n new table
         my_cursor.execute("""
                 CREATE TABLE IF NOT EXISTS users (
-                    id PRIMARY KEY NOT NULL,
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
                     user_name TEXT,
                     user_password TEXT,
                     user_age INTEGER,

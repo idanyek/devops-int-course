@@ -1,11 +1,13 @@
-import asyncio, logging
+import asyncio, logging, os
+from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 
+# loading .env file
+load_dotenv()
 
-
-bot = Bot(token=BOT_TOKEN)
+#getting token from env file
+bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
-
 
 @dp.message()
 async def replay_as_echo(message: types.Message):
@@ -13,6 +15,7 @@ async def replay_as_echo(message: types.Message):
         await message.send_copy(chat_id=message.chat.id) #432654152
     except TypeError:
         await message.reply(text="sorry i get an error, please try again.")
+
     # if message.text:
     #     await message.reply(text=message.text)
     # elif message.sticker:

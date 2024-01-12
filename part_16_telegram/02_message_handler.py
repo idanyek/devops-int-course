@@ -1,11 +1,13 @@
-import asyncio, logging
+import asyncio, logging, os
+from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 
-BOT_TOKEN = "6792265112:AAGEc3rii_TrsGO7zoieiaKMUMfZP-hiL9E"
+# loading .env file
+load_dotenv()
 
-bot = Bot(token=BOT_TOKEN)
+#getting token from env file
+bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
-
 
 @dp.message()
 async def answer_as_echo(message: types.Message):
